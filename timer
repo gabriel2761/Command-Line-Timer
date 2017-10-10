@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+if [[ -z "$1" ]]; then
+	x=1200
+elif [[ "$1" =~ ^-?[0-9]+$ ]]; then
+	x="$1"
+else
+	echo "Needs to be a number"
+	exit;
+fi
+
+while [ $x -ge 0 ]; do
+	sleep 1s
+	echo $((x--))
+done;
+
+open /Users/nikomojica/Bin/timer.html
+
